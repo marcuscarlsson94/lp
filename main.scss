@@ -47,6 +47,14 @@ h1 {
   font-weight: 900;
   font-family: $family__medium;
   margin: 0;
+
+  @include tablet {
+    font-size: 45px;
+  }
+  @include mobile {
+    font-size: 45px;
+  }
+
 }
 
 p {
@@ -56,16 +64,19 @@ p {
   line-height: 150%;
   color: rgba(0,0,0,.7);
 }
+
 /*====
 Reusable
 ======*/
 .container {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: auto;
 }
 
 .container-xs {
-  width: 980px;
+  width: 100%;
+  max-width: 980px;
 }
 /*====
 Hamburger / Nav
@@ -303,7 +314,7 @@ $margin-service: 80px;
 }
 
 .f-service {
-  flex: calc(50% - 20px);
+  flex-basis: calc(33% - 60px);
 
   &:nth-child(2) {
     margin-bottom: $margin-service;
@@ -312,6 +323,7 @@ $margin-service: 80px;
 
   &:nth-child(3) {
     margin-bottom: $margin-service;
+    margin-right: $margin-service - 30px;
   }
 
   &:nth-child(4) {
@@ -321,6 +333,12 @@ $margin-service: 80px;
 
   &:nth-child(5) {
     margin-bottom: $margin-service;
+    margin-right: $margin-service - 30px;
+  }
+
+  &:nth-child(6) {
+    margin-bottom: $margin-service;
+    margin-right: $margin-service - 30px;
   }
 
   &-heading {
@@ -333,7 +351,6 @@ $margin-service: 80px;
 
 .service-text-wrapper {
   flex-direction: column;
-  flex: 75%;
 }
 
 .circle {
@@ -341,37 +358,17 @@ $margin-service: 80px;
   height: $circle-size;
   width: $circle-size;
   font-size: $circle-size;
-  color: #2e8ed3;
+  color: #4054b2;
   margin-right: 20px;
 }
-
-/*====
-Oval overlay
-======*/
-
-.oval-overlay {
-  position: relative;
-  max-width:100%;
-  overflow: hidden;
-  &:after {
-    content: "";
-    width: 200%;
-    height: 400px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-  }
-}
-
 
 /*====
 Case
 ======*/
 .case-wrapper {
   height: 400px;
+  width: 100%;
+  max-width: 1280px;
   position: relative;
 }
 
@@ -441,7 +438,6 @@ Case
   &-3 {
     margin-right: 20px;
     background: url('./img/case_03.jpg');
-    background-size: 90% 90%;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -492,10 +488,12 @@ FLEX COMPONENTS
 .f {
   display: flex;
   @include tablet {
-    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   @include mobile {
-    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
@@ -526,7 +524,7 @@ FLEX COMPONENTS
 }
 
 .f-col-half {
-  flex-basis: 50%;
+  // flex-basis: 50%;
 }
 
 .f-col-full {
