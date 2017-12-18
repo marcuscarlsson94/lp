@@ -9,7 +9,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #fff;
+  background-color: #ececec;
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
   font-size: $standard;
@@ -20,6 +20,14 @@ body {
   margin: auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+section {
+  background-color: white;
+}
+
+hero {
+  background-color: white;
 }
 
 a {
@@ -310,35 +318,91 @@ $margin-service: 80px;
 
 .f-service-wrapper {
   flex-wrap: wrap;
-  margin-top: 70px;
+  padding-top: 70px;
 }
 
 .f-service {
   flex-basis: calc(33% - 60px);
 
+  @include tablet {
+    flex-basis: auto;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  @include mobile {
+    flex-basis: auto;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+
   &:nth-child(2) {
     margin-bottom: $margin-service;
     margin-right: $margin-service / 2;
+
+    @include tablet {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+    @include mobile {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
   }
 
   &:nth-child(3) {
     margin-bottom: $margin-service;
     margin-right: $margin-service - 30px;
+
+    @include tablet {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+    @include mobile {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
   }
 
   &:nth-child(4) {
     margin-right: $margin-service / 2;
     margin-bottom: $margin-service;
+
+    @include tablet {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+    @include mobile {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
   }
 
   &:nth-child(5) {
     margin-bottom: $margin-service;
     margin-right: $margin-service - 30px;
+
+    @include tablet {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+    @include mobile {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
   }
 
   &:nth-child(6) {
     margin-bottom: $margin-service;
     margin-right: $margin-service - 30px;
+
+    @include tablet {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+    @include mobile {
+      margin: 20px 0;
+      padding: 0 20px;
+    }
   }
 
   &-heading {
