@@ -317,6 +317,13 @@ Customers
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+  transition: .3s ease all;
+
+  &:hover {
+    filter: none;
+    -webkit-filter: none;
+    opacity: 0.8;
+  }
 
   &-volvo {
     height: 17px;
@@ -325,6 +332,13 @@ Customers
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    transition: .3s ease all;
+
+    &:hover {
+      filter: none;
+      -webkit-filter: none;
+      opacity: 0.8;
+    }
   }
 
   &-google {
@@ -334,8 +348,17 @@ Customers
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    transition: .3s ease all;
+
+    &:hover {
+      filter: none;
+      -webkit-filter: none;
+      opacity: 0.8;
+    }
   }
+
 }
+
 /*====
 Services
 ======*/
@@ -540,7 +563,7 @@ Case
 
   text-decoration: none;
   transition: .3s ease all;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 
   &:hover span {
     padding-left: 10px;
